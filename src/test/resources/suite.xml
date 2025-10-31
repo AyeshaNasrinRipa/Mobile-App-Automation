@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Calculator Automation Suite" verbose="1" parallel="false">
+
+    <test name="Calculator Mobile Automation">
+        <classes>
+            <class name="testrunner.CalcTestRunner"/>
+        </classes>
+    </test>
+</suite>

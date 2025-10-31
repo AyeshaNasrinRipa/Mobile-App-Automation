@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation("org.testng:testng:7.11.0")
+    // https://mvnrepository.com/artifact/io.appium/java-client
+    implementation("io.appium:java-client:10.0.0")
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation("org.seleniumhq.selenium:selenium-java:4.38.0")
+    // Apache Commons CSV
+    implementation 'org.apache.commons:commons-csv:1.10.0'
+    // https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
+    implementation("io.qameta.allure:allure-testng:2.30.0")
+}
+
+test {
+    useTestNG(){
+        suites "./src/test/resources/suite.xml"
+
+    }
+
+}
